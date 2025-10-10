@@ -1,0 +1,34 @@
+.uk-herobg {
+  background: url("/destination/uk/Study\ in\ UK\ website.webp") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh; 
+}
+
+.talk::before{
+    content: "📞";
+    font-size:x-large;
+}
+.highlights {
+  list-style: none; 
+  padding-left: 0; 
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 30px; 
+  margin-bottom: 10px;
+}
+
+.highlights li::before {
+  content: "✅"; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  color: green;
+}
+.underline
+{
+    text-decoration: underline;
+}

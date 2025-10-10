@@ -1,0 +1,88 @@
+body {
+  font-family: Nunito, sans-serif;
+  margin: 0;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Animated background */
+  background: url("/clouds.webp") repeat-x;
+  background-size: cover;
+  animation: moveClouds 60s linear infinite; /* slow continuous movement */
+}
+
+/* Keyframes to move background horizontally */
+@keyframes moveClouds {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: +2000px 0; /* move left over time */
+  }
+}
+
+
+.hero-text {
+  position: relative;
+  z-index: 5;
+}
+
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-icons .floating-icon {
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(clamp(0.3, var(--scale), 1));
+  border-radius: 50%;
+  object-fit: cover;
+  animation: scatter 1.5s ease-out forwards, float 4s ease-in-out calc(1.5s + var(--delay)) infinite;
+  cursor: pointer;
+  max-width: 100px;
+  max-height: 100px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+
+.floating-icons .floating-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+  z-index: 10;
+}
+
+@keyframes scatter {
+  0% { transform: translate(-50%, -50%) scale(0.3) rotate(0deg); }
+  100% {
+    transform: translate(
+      clamp(-40vw, calc(var(--dx) * 1vw), 40vw),
+      clamp(-30vh, calc(var(--dy) * 1vh), 30vh)
+    ) scale(clamp(0.3, var(--scale),1)) rotate(var(--rotate));
+  }
+}
+
+@keyframes float {
+  0%   { transform: translate(var(--fx), var(--fy)) scale(clamp(0.3, var(--scale),1)); }
+  25%  { transform: translate(calc(var(--fx) + 5px), calc(var(--fy) - 10px)) scale(calc(clamp(0.3, var(--scale),1) + 0.05)); }
+  50%  { transform: translate(var(--fx), calc(var(--fy) - 15px)) scale(clamp(0.3, var(--scale),1)); }
+  75%  { transform: translate(calc(var(--fx) - 5px), calc(var(--fy) - 10px)) scale(calc(clamp(0.3, var(--scale),1) + 0.05)); }
+  100% { transform: translate(var(--fx), var(--fy)) scale(clamp(0.3, var(--scale),1)); }
+}
+
+/* Event section doesn’t need extra CSS */

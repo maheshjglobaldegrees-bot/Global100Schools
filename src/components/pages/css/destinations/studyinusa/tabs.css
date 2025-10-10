@@ -1,0 +1,35 @@
+/* Glass effect for the WHOLE pill */
+.glass-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-block;
+}
+
+/* Tabs inside */
+.tab-link {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tab-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tab-link.active {
+  color: red;
+  font-weight: 600;
+}
+.bottom {
+  position: absolute; /* or fixed if you want it floating on scroll */
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}

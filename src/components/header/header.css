@@ -1,0 +1,26 @@
+/* Show dropdown menu on hover */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove default margin to keep it aligned */
+}
+
+/* Optional: add fade-in effect */
+.navbar-nav .dropdown > .dropdown-menu {
+  transition: visibility 0.2s, opacity 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.navbar-nav .dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.shadow-danger:hover {
+ filter: blur(0.5px) brightness(1.1) contrast(1.2) saturate(1.3) drop-shadow(0 0 5px red);
+}
+.sticky
+{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
