@@ -16,6 +16,9 @@ import Studyinusa from './components/pages/destinations/usa/Studyinusa';
 import Studyinuk from './components/pages/destinations/uk/Studyinuk';
 import Studyinaustralia from './components/pages/destinations/australia/Studyinaustralia';
 import Studyincanada from './components/pages/destinations/canada/Studyincanada';
+import StudyinIreland from './components/pages/destinations/Ireland/StudyinIreland';
+import StudyinNewZealand from './components/pages/destinations/newzealand/StudyinNewZealand';
+
 
 const App = () => {
   return (
@@ -33,6 +36,8 @@ const App = () => {
           <Route path="/destinations/uk" element={<Studyinuk/>}/>
           <Route path='/destinations/australia' element={<Studyinaustralia/>}/>
           <Route path='/destinations/canada' element={<Studyincanada/>}/>
+         <Route path='/destinations/ireland' element={<StudyinIreland/>}/>
+         <Route path='destinations/newzealand' element={<StudyinNewZealand/>}/>
         </Routes>
       </div>
     </Router>

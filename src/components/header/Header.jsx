@@ -75,8 +75,13 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/destinations/singapore">
-                    Study in Singapore
+                  <Link className="dropdown-item" to="/destinations/ireland">
+                    Study in Ireland
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/destinations/newzealand">
+                    Study in NewZealand
                   </Link>
                 </li>
               </ul>
